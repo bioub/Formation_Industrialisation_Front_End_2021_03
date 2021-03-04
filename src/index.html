@@ -5,12 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Horloge</title>
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css" />
   </head>
 
   <body>
-    <div class="horloge"></div>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/"> Mon site vitrine </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item"> Introduction </a>
+
+          <a class="navbar-item"> Présentation </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="button is-primary show-modal"> Contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero is-link has-text-centered">
+      <div class="hero-body">
+        <p class="title">Link hero</p>
+        <p class="subtitle horloge"></p>
+        <a class="button is-primary show-modal"> Contact </a>
+      </div>
+    </section>
+
+    <section class="p-5 has-text-centered">
+      <div class="columns">
+        <div class="column">First column</div>
+        <div class="column">Second column</div>
+        <div class="column">Third column</div>
+      </div>
+    </section>
+
+    <section class="has-background-link has-text-white p-5">
+      <div class="columns">
+        <div class="column is-one-quarter">First column</div>
+        <div class="column">Second column</div>
+      </div>
+    </section>
+
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" placeholder="Email" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Message</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Message..."></textarea>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link hide-modal">Submit</button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-light hide-modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="modal-close is-large hide-modal"
+        aria-label="close"
+      ></button>
+    </div>
 
     <script src="./js/horloge.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

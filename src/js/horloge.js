@@ -4,15 +4,15 @@
   class Horloge {
     /**
      * @constructor
-     * @param {HTMLElement} container
+     * @param {HTMLElement} containerEl
      */
-    constructor(container) {
-      this._container = container;
+    constructor(containerEl) {
+      this._containerEl = containerEl;
     }
 
     _render() {
       const now = new Date();
-      this._container.innerText = now.toLocaleTimeString();
+      this._containerEl.innerText = now.toLocaleTimeString();
     }
 
     start() {
