@@ -6,17 +6,21 @@
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
+    "html-webpack-plugin": "^5.2.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
     "live-server": "^1.2.1",
     "prettier": "^2.2.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0"
   },
   "scripts": {
     "serve:dev": "live-server --mount=/node_modules:node_modules src",
     "format": "prettier --write \"**/*.{md,html,css,js}\"",
     "clean": "rimraf dist/*",
     "uglify": "uglifyjs src/js/horloge.js src/js/modal.js src/js/index.js -o dist/bundle.min.js",
+    "webpack": "webpack --mode development",
     "build": "npm run clean && npm run uglify"
   },
   "husky": {

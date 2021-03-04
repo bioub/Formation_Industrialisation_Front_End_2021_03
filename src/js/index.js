@@ -1,5 +1,5 @@
-import { Horloge } from './horloge.js';
-import { hideModal, showModal } from './modal.js';
+import { Horloge } from './horloge';
+import { hideModal, showModal } from './modal';
 
 const divEl = document.querySelector('.horloge');
 const clock = new Horloge(divEl);
