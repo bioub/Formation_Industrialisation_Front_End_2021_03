@@ -1,6 +1,6 @@
 // Module IIFE
 // Immediately Invoked Function Expression
-(function (global, Horloge) {
+(function (global) {
   'use strict';
 
   const modalEl = document.querySelector('.modal');
@@ -13,6 +13,11 @@
     modalEl.classList.remove('is-active');
   }
 
-  global.showModal = showModal;
-  global.hideModal = hideModal;
-})(window, Horloge);
+  global.FormationTech = global.FormationTech || {};
+  FormationTech.Modal = {
+    show: showModal,
+    hide: hideModal,
+  };
+  // global.showModal = showModal;
+  // global.hideModal = hideModal;
+})(this);

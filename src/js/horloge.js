@@ -21,5 +21,6 @@
     }
   }
 
-  global.Horloge = Horloge;
+  global.FormationTech = global.FormationTech || {};
+  FormationTech.Horloge = Horloge;
 })(window);
