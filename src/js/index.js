@@ -20,3 +20,12 @@
     }
   });
 })(window, FormationTech);
+
+// Supprimer les fonctions IIFE (mais conserver leur contenu)
+// Remplacer les scripts par des import / export ESM
+// Dans le fichier index.html
+// ne charger en module que le point d'entrée de l'application
+// démarrer un server http avec :
+// npx http-server theorie/esm
+// ou
+// npx live-server theorie/esm
