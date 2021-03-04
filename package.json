@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{md,html,css,js}\""
+  }
+}
