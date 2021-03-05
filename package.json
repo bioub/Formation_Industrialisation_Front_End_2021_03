@@ -41,7 +41,8 @@
     "webpack:prod": "npm run clean && webpack --mode production",
     "build": "npm run clean && npm run uglify",
     "lint:js": "eslint src/js --fix",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "husky": {
     "hooks": {
