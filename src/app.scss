@@ -1,0 +1,28 @@
+$primary: pink;
+$link: orange;
+$bg-color: beige;
+
+@import "../node_modules/bulma/bulma.sass";
+// @import "../node_modules/bulma/sass/utilities/_all.sass";
+// @import "../node_modules/bulma/sass/components/navbar.sass";
+// @import "../node_modules/bulma/sass/elements/button.sass";
+// @import "../node_modules/bulma/sass/grid/columns.sass";
+
+body {
+  user-select: none;
+  background-color: $bg-color;
+}
+
+.hero {
+  .horloge {
+    color: $primary;
+
+    &:hover { // .horloge:hover
+      background-color: red;
+    }
+
+    :hover { // .horloge :hover
+
+    }
+  }
+}

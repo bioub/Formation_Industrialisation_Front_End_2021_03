@@ -34,6 +34,18 @@ function configFactory(_, { mode }) {
               ? MiniCssExtractPlugin.loader
               : 'style-loader',
             'css-loader',
+            'postcss-loader',
+          ],
+        },
+        {
+          test: /\.scss$/,
+          use: [
+            mode === 'production'
+              ? MiniCssExtractPlugin.loader
+              : 'style-loader',
+            'css-loader',
+            'postcss-loader',
+            'sass-loader',
           ],
         },
         // Exercice 2 :
