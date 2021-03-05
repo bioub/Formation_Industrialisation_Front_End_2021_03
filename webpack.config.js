@@ -1,9 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const json5 = require('json5');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 function configFactory(_, { mode }) {
   /** @type {import('webpack').Configuration} */
   const config = {
-    devtool: false,
+    devtool: mode === 'production' ? false : 'source-map',
     entry: './src/js/index',
     output: {
       filename: mode === 'production' ? 'bundle.[contenthash].js' : 'bundle.js',
@@ -18,6 +20,22 @@ function configFactory(_, { mode }) {
         // ajouter la règle pour prendre en charge ce type de fichier
         // comme dans :
         // https://github.com/webpack/webpack/tree/master/examples/custom-json-modules
+        {
+          test: /\.json5$/,
+          type: 'json',
+          parser: {
+            parse: json5.parse,
+          },
+        },
+        {
+          test: /\.css$/,
+          use: [
+            mode === 'production'
+              ? MiniCssExtractPlugin.loader
+              : 'style-loader',
+            'css-loader',
+          ],
+        },
         // Exercice 2 :
         // le fichier index.js charge un fichier .css
         // installer style-loader et css-loader
@@ -50,6 +68,10 @@ function configFactory(_, { mode }) {
       }),
     ],
   };
+
+  if (mode === 'production') {
+    config.plugins.push(new MiniCssExtractPlugin());
+  }
 
   return config;
 }

@@ -12,17 +12,21 @@
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.1",
     "html-webpack-plugin": "^5.2.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
     "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^1.3.9",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
+    "style-loader": "^2.0.0",
     "webpack": "^5.24.3",
-    "webpack-cli": "^4.5.0"
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "serve:dev": "live-server --mount=/node_modules:node_modules src",
+    "serve:dev": "webpack serve --mode development",
     "format": "prettier --write \"**/*.{md,html,css,js}\"",
     "clean": "rimraf dist/*",
     "uglify": "uglifyjs src/js/horloge.js src/js/modal.js src/js/index.js -o dist/bundle.min.js",
