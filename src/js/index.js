@@ -1,5 +1,6 @@
 import { Horloge } from './horloge';
 import { hideModal, showModal } from './modal';
+import '../app.css';
 
 const divEl = document.querySelector('.horloge');
 const clock = new Horloge(divEl);
@@ -17,3 +18,5 @@ document.addEventListener('click', (event) => {
     return;
   }
 });
+
+console.log('ABC'.repeat(3));

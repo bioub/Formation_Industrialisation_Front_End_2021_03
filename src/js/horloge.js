@@ -1,3 +1,6 @@
+import { format } from 'date-fns';
+import config from '../config.json5';
+
 export class Horloge {
   /**
    * @constructor
@@ -9,7 +12,7 @@ export class Horloge {
 
   _render() {
     const now = new Date();
-    this._containerEl.innerText = now.toLocaleTimeString();
+    this._containerEl.innerText = format(now, config.formatNow);
   }
 
   start() {

@@ -1,0 +1,4 @@
+{
+  // format utilisé dans l'horloge
+  formatNow: 'HH:mm:ss',
+}
